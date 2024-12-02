@@ -17,17 +17,23 @@ This project will be completed in phases. The first phase will be to work on thi
 
 ## Phase 0: Selection, Analysis & Plan
 
-#### Selected Project: CHOOSE WISELY
+#### Selected Project: SPACE INVADERS
 
 ### Necessary Features
 What are the core features that your program should have? These should be things that __must__ be implemented in order to make the program useable/playable, not extra features that could be added to make the program more interesting/fun.
 
-YOUR ANSWERS HERE
+1. Grid of Enemies
+2. User Shooting Projectile
+3. Restart Game (Losing and Winning)
 
 ### Extra Features
 What are some features that are not essential to the program, but you would like to see (provided you have time after completing the necessary features. Theses can be customizations that are not part of the core requirements.
 
-YOUR ANSWERS HERE
+1. Lives
+2. Enemies Shooting Projectiles
+3. Enemies Moving
+4. Points
+5. Shields
 
 ### Array Usage
 How will you be using arrays in this project?
@@ -36,30 +42,37 @@ How will you be using arrays in this project?
 - YOUR ANSER HERE
 
 2D Array:
-- YOUR ANSWER HERE
+- Of the enemies class
 
 
 ### Controls
 How will your program be controlled? List all keyboard commands and mouse interactions.
 
 Keyboard Commands:
-- LIST OF COMMANDS HERE
+- Spacebar: shoot projectiles
+- Arrow Keys/AD: To move your shooter
+- R: to restart game
+- M/K: to choose at start if user wants to use mouse commands or keyboard commands
 
 Mouse Control:
-- Mouse movement:
-- Mouse pressed:
+- Mouse movement: To move your shooter
+- Mouse pressed: To shoot projectiles
 
 
 ### Classes
 What classes will you be creating for this project? Include the instance variables and methods that you believe you will need. You will be required to create at least 2 different classes. If you are going to use classes similar to those we've made for previous assignments, you will have to add new features to them.
 
-CLASS NAME0
+CLASS INVADERS
 - Instance variables:
   - LIST INSTANCE VARS HERE
 - METHODS
-  - LIST METHODS HERE
+  - Shoot (extra feature)
+  - Moving (extra feature)
+  - Display
+  - Boolean Life Status (dead/alive)
+  - Collission Checking
 
-CLASS NAME1
+CLASS SHOOTERS
 - Instance variables:
   - LIST INSTANCE VARS HERE
 - METHODS
