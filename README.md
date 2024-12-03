@@ -64,7 +64,10 @@ What classes will you be creating for this project? Include the instance variabl
 
 CLASS INVADERS
 - Instance variables:
-  - LIST INSTANCE VARS HERE
+  - int[][] invaders
+  - int invaderSize
+  - int xcoor, ycoor (or maybe PVector center?)
+  - int invaderSpeed
 - METHODS
   - Shoot (extra feature)
   - Moving (extra feature)
@@ -74,6 +77,13 @@ CLASS INVADERS
 
 CLASS SHOOTERS
 - Instance variables:
-  - LIST INSTANCE VARS HERE
+  - int xcoor, ycoor (or maybe PVector center?)
+  - int shooterSize
+  - int shooterSpeed
 - METHODS
-  - LIST METHODS HERE
+  - Shoot
+  - Moving
+  - Display
+  - Boolean Life Status
+  - Collision Checking
+  - Lives (extra feature)
