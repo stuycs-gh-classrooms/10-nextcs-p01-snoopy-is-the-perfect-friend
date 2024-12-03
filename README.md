@@ -39,10 +39,10 @@ What are some features that are not essential to the program, but you would like
 How will you be using arrays in this project?
 
 1D Array:
-- YOUR ANSER HERE
+- to create a row of shields (extra)
 
 2D Array:
-- Of the enemies class
+- to create grid of invaders
 
 
 ### Controls
@@ -64,26 +64,27 @@ What classes will you be creating for this project? Include the instance variabl
 
 CLASS INVADERS
 - Instance variables:
-  - int[][] invaders
+  - int[][] invaders -> to create grid of invaders
   - int invaderSize
-  - int xcoor, ycoor (or maybe PVector center?)
+  - PVector center (to represent xcor and ycor)
   - int invaderSpeed
 - METHODS
   - Shoot (extra feature)
   - Moving (extra feature)
   - Display
-  - Boolean Life Status (dead/alive)
+  - Boolean Alive (false: dead)
   - Collission Checking
 
 CLASS SHOOTERS
 - Instance variables:
-  - int xcoor, ycoor (or maybe PVector center?)
+  - PVector center (to represent xcor and ycor)
   - int shooterSize
   - int shooterSpeed
+  - int Lives
 - METHODS
   - Shoot
   - Moving
   - Display
-  - Boolean Life Status
+  - Boolean Alive (false: dead)
   - Collision Checking
-  - Lives (extra feature)
+  - updateLives (extra feature)
