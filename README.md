@@ -55,7 +55,7 @@ Keyboard Commands:
 - M/K: to choose at start if user wants to use mouse commands or keyboard commands
 
 Mouse Control:
-- Mouse movement: To move your shooter
+- Mouse movement: To move your shooter (will only need mouseX)
 - Mouse pressed: To shoot projectiles
 
 
