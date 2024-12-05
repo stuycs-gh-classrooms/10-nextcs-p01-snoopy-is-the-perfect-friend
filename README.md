@@ -34,6 +34,7 @@ What are some features that are not essential to the program, but you would like
 3. Enemies Moving
 4. Points
 5. Shields
+6. Endless Enemies but as time goes on, make the speed in which they move increase
 
 ### Array Usage
 How will you be using arrays in this project?
