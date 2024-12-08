@@ -40,6 +40,7 @@ class User{
   void updateLives(){
     if(alive == false){
       Lives -= 1;
+      //needs a case for when lives = 0
     }
   }
   
