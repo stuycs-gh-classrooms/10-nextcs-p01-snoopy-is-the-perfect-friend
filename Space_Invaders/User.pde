@@ -4,18 +4,21 @@ class User{
   int userSize;
   int userSpeed;
   int Lives;
-  color user;
+  color userColor;
   boolean alive;
+  Projectile p;
   
   User(color c, int size, int l, PVector p){
-    user = c;
-    fill(user);
+    userColor = c;
+    fill(userColor);
     userSize = size;
     Lives = l;
     center = p;
   }//constructor
   
-  void shoot(int projectileSpeed){
+  void shoot(){
+    p = new Projectile(255, 10, center);
+    
     //launches a projectile
   } //shoot
   
@@ -25,13 +28,13 @@ class User{
   }//moving
   
   void display(){
-    
+    square(center.x, center.y, userSize);
   }//display
   
-  boolean collisionCheck(projectile other){ //we'll need a PROJECTILE class
+  boolean collisionCheck(Projectile other){ //we'll need a PROJECTILE class
     //check the distance between the centers
     return ( this.center.dist(other.center)
-       <= (this.userSize/2 + other.bsize/2) );
+       <= (this.userSize/2 + other.psize/2) );
   }//collisionCheck
   
   void updateLives(){
