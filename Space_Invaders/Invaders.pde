@@ -2,19 +2,22 @@ class Invaders
 {
   //instance variables
   int size;
-  PVector center;
+  PVector topLeft;
   int xspeed;
   int yspeed;
   color c;
   boolean alive;
   int type;
+  PImage img0, img1, img2; //declared variable to store image
+
   
   
   Invaders(PVector p, int shootingChance, int numInRow)
   {
-    center = new PVector(p.x, p.y);
+    topLeft = new PVector(p.x, p.y);
     alive = true;
     type = int(random(0, 3));
+//    println(type);
   }//constructor
   
   void shoot(int projectileSpeed){
@@ -22,31 +25,32 @@ class Invaders
     //launches a projectile from a random invader in the grid
   } //shoot
   
-  void move(){
-    if (center.x > width - size/2 || center.x < size/2){
+  void move(){//needs to be adjusted
+    if (topLeft.x > width - size/2 || topLeft.x < size/2){
       xspeed *= -1;
     }
-    if (center.y > height - size/2 || center.y < height/2){
+    if (topLeft.y > height - size/2 || topLeft.y < height/2){
       yspeed *= -1;
     }
-    center.x += xspeed;
-    center.y += yspeed;
+    topLeft.x += xspeed;
+    topLeft.y += yspeed;
   }//moving
   
   void display(){
+    img0 = loadImage("Alien0.png");
+//  img1 = loadImage("Alien1.png");
+//  img2 = loadImage("Alien2.png");
     if (type == Alien0){
-      image(img0, 0, 0); 
+      image(img0, topLeft.x, topLeft.y, 10, 10); 
     }
+    /*
     if (type == Alien1){
       image(img0, 0, 0); //change to img1 later
     }
     if (type == Alien2){
       image(img0, 0, 0); //change to img2 later
     }
+    */
   }//display
-  
-  void setColor(color newC){
-    c = newC;
-  }//setColor
   
 }//Invaders

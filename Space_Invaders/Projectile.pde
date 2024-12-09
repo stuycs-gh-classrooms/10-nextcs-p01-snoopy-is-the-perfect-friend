@@ -13,7 +13,7 @@ class Projectile{
   }//constructor
 
   boolean collisionInvadersCheck(Invaders other){
-    return ( this.center.dist(other.center)
+    return ( this.center.dist(other.topLeft)
      <= (this.psize/2 + other.size/2) );
     }//collisionInvadersCheck()  
   
