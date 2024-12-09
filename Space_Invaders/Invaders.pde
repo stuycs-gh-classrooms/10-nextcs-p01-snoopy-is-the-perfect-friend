@@ -1,16 +1,15 @@
 class Invaders
 {
   //instance variables
-  int size;
-  PVector topLeft;
-  int xspeed = 1;
-  int yspeed;
-  color c;
-  boolean alive;
-  int type;
-  PImage img0, img1, img2; //declared variable to store image
-
-  
+  int size; // length & height of each alien
+  PVector topLeft; //coor of top left corner of each invader
+  int xspeed = 1; //speed of movement in x direction
+  int yspeed; //speed of movement in y direction
+  boolean alive; //alive or dead status of the specific invader
+  int type; //alien0, alien1, alien2
+  PImage img0, img1, img2; //declared variable to store image of types of aliens
+  int direction;
+  int previousDirection;
   
   Invaders(PVector p, int shootingChance, int iSize)
   {
@@ -18,6 +17,7 @@ class Invaders
     alive = true;
     size = iSize;
     type = 0;
+    direction = RIGHT;
 //    type = int(random(0, 3));
 //    println(type);
   }//constructor
@@ -27,24 +27,12 @@ class Invaders
     //launches a projectile from a random invader in the grid
   } //shoot
   
-  void move(){//needs to be adjusted
-//    if (topLeft.x > width - size/2 || topLeft.x < size/2){
-    xspeed += 1;
-//    println(xspeed);
-//    }
-//    if (topLeft.y > height - size/2 || topLeft.y < height/2){
-//      yspeed *= -1;
-//    }
-    topLeft.x += xspeed;
-    topLeft.y += yspeed;
-  }//moving
-  
   void display(){
-    img0 = loadImage("Alien0.png");
+    img0 = loadImage("Alien0.png"); //loads image into a variable of type PImage
 //  img1 = loadImage("Alien1.png");
 //  img2 = loadImage("Alien2.png");
     if (type == Alien0){
-      image(img0, topLeft.x, topLeft.y, size, size); 
+      image(img0, topLeft.x, topLeft.y, size, size); //displays the image 
 //      println(topLeft.x, topLeft.y);
     }
     /*
