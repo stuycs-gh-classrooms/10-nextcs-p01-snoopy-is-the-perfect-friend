@@ -7,10 +7,12 @@ int shootingChance, numAliensinRows;
 
 void setup() {
   size(800, 600); // Set the canvas size
-  grid = new InvadersGrid(20, 10, 4);
+  grid = new InvadersGrid(4, 3, 30);
+  
 }
 
 void draw() {
   background(200); // Set a background color
   grid.display();
+  grid.move();
 }
